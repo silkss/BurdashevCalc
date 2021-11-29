@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="BurdashevCalc.Views.Cabin"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BurdashevCalc.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Border >
+        <Grid Margin="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Content="Размеры кабины в мм" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+            
+            <Label Content="Ось X" Grid.Row="1" Grid.Column="0"/>
+            <TextBox Text="{Binding X}" Grid.Row="1" Grid.Column="1"/>
+
+            <Label Content="Ось Y" Grid.Row="2" Grid.Column="0"/>
+            <TextBox Text="{Binding Y}" Grid.Row="2" Grid.Column="1"/>
+
+            <Label Content="Ось Z" Grid.Row="3" Grid.Column="0"/>
+            <TextBox Text="{Binding Z}" Grid.Row="3" Grid.Column="1"/>
+
+            <Label Content="Количество перемычек на оси X" Grid.Row="4" Grid.Column="0"/>
+            <TextBox Text="{Binding YsegmentsInXSurface}" Grid.Row="4" Grid.Column="1"/>
+
+            <Label Content="Количество перемычек на оси Z" Grid.Row="5" Grid.Column="0" IsEnabled="False"/>
+            <TextBox Grid.Row="5" Grid.Column="1" IsReadOnly="True"/>
+        </Grid>
+    </Border>
+</UserControl>
